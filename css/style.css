@@ -1,3 +1,4 @@
+/* loading */
 .loading-container {
     position: fixed;
     top: 0;
@@ -43,3 +44,5 @@
         opacity: 1;
     }
 }
+
+/* home */
