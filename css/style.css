@@ -4,6 +4,24 @@
     font-weight: bold;
 }
 
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.desc {
+    font-size: 1rem;
+    line-height: 1.3em;
+    font-weight: 200;
+}
+
+.category h2 {
+    font-size: 3rem;
+    margin: 20px;
+}
+
 ul {
     display: flex;
     justify-content: center;
@@ -89,8 +107,8 @@ header .tooltip-text {
     font-weight: 600;
     border-radius: 6px;
     padding: 5px 0;
-    background: #fcd53f;
-    color: darkblue;
+    background: #f7e0d3;
+    color: #5f7eaf;
 }
 
 header a:hover .tooltip-text {
@@ -165,6 +183,7 @@ header a:hover .tooltip-text {
     height: 60px;
     font-size: 55px;
     margin-bottom: 1.3rem;
+    color: #5f7eaf;
 }
 
 #home .title p {
@@ -264,6 +283,7 @@ header a:hover .tooltip-text {
     margin: 0 auto 100px;
     display: inline-block;
     font-size: 40px;
+    color: #5f7eaf;
 }
 
 .about-content {
@@ -291,11 +311,87 @@ header a:hover .tooltip-text {
     font-size: 22px;
 }
 
+/* favorite */
+#favorite {
+    background-color: #f7e0d3;
+    position: relative;
+    background-size: cover;
+    padding: 80px 0 140px 0;
+}
+#favorite h2 {
+    color: #5f7eaf;
+}
+
+#favorite .slide_warp {
+    width: 960px;
+    height: 450px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#favorite .slide_warp .slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left 0.5s ease-in-out;
+}
+
+#favorite .slide_warp .slides li:not(:last-child) {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+}
+
+#favorite .slide_img_box {
+    width: 300px;
+    height: 300px;
+}
+
+#favorite .slide_img_box img {
+    width: 100%;
+    height: 100%;
+}
+
+#favorite .slide_text_box {
+    text-align: left;
+    margin: 20px 0;
+    height: 120px;
+}
+
+#favorite .slide_text_box .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#favorite .slide_text_box .desc {
+    margin-top: 10px;
+}
+
+#favorite .controls .prev,
+#favorite .controls .next {
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transform: translateY(-50);
+    top: 50%;
+}
+
+#favorite .controls .prev {
+    left: 100px;
+}
+
+#favorite .controls .next {
+    right: 100px;
+}
+
 /* footer */
 #footer {
     text-align: center;
     display: flex;
     flex-direction: column;
+    background-color: #afafc8;
 }
 
 #footer h2 {
@@ -323,4 +419,22 @@ a {
 }
 a:visited {
     color: black;
+}
+
+@keyframes grow {
+    from {
+        transform: translateY(1.5em);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow-out {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(1.5em);
+    }
 }
