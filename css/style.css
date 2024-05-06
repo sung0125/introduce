@@ -1,5 +1,100 @@
+* {
+    font-family: GmarketSans;
+    font-size: normal;
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "GmarketSans";
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "GmarketSans";
+    font-weight: 500;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix")
+            format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf") format("truetype");
+    font-display: swap;
+}
 .container {
     min-width: 1200px;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+
+header img {
+    height: 21px;
+    height: 23px;
+    margin: 0 5px 0 5px;
+}
+
+header li a {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+    text-align: center;
+}
+
+header li a:hover {
+    top: -3px;
+}
+
+header .tooltip-text {
+    display: none;
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+    width: 70px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 5px 0;
+    background: #fcd53f;
+    color: darkblue;
+}
+
+header a:hover .tooltip-text {
+    display: block;
 }
 
 /* loading */
@@ -51,7 +146,7 @@
 
 /* home */
 #home {
-    background-image: url("../images/home.jpg");
+    background-color: #e2c3c7;
     background-size: cover;
     background-attachment: fixed;
     background-position: 0 -120px;
@@ -66,7 +161,7 @@
 }
 
 #home .title h1 {
-    width: 500px;
+    width: 600px;
     height: 60px;
     font-size: 55px;
     margin-bottom: 1.3rem;
@@ -75,6 +170,7 @@
 #home .title p {
     font-size: 15px;
     font-weight: 400;
+    text-align: center;
 }
 
 /* 스크롤 모양 위치 잡기 */
@@ -153,6 +249,78 @@
 }
 
 #home .scroll p {
-    font-family: "Sail", cursive;
     font-size: 15px;
+}
+
+/* about */
+#about-profile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 0 140px 0;
+    margin: 0 0 140px 0;
+}
+#about-profile h2 {
+    margin: 0 auto 100px;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.about-content {
+    display: flex;
+    margin: 0 auto;
+}
+
+.info-about {
+    margin: 0 0 0 60px;
+}
+
+.txt-about {
+    margin-top: 55px;
+}
+
+.txt-about h3 {
+    display: inline-block;
+    margin-bottom: 17px;
+    width: 110px;
+    font-size: 22px;
+}
+
+.txt-about p {
+    display: inline-block;
+    font-size: 22px;
+}
+
+/* footer */
+#footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-box {
+    width: 100%;
+    padding: 80px 0 70px 0;
+}
+.footer-box div {
+    display: inline-block;
+    margin: 35px;
+}
+.footer-box img {
+    width: 65px;
+}
+#footer h4 {
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: black;
 }
