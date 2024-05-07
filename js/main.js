@@ -1,3 +1,8 @@
+// 로딩
+$(window).load(function () {
+    $(".loading-container").delay(2000).fadeOut();
+});
+
 // 메인화면 에니메이션
 const content = "Hello, I'm Sungbae!";
 const text = document.querySelector(".title h1");
@@ -26,7 +31,8 @@ let currentIdx = 0;
 let slideWidth = 300;
 let slideMargin = 30;
 
-slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + "px";
+slides.style.width =
+    (slideWidth + slideMargin) * slideCount - slideMargin + "px";
 
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
