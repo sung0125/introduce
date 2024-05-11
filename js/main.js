@@ -4,19 +4,22 @@ $(window).load(function () {
 });
 
 // 메인화면 에니메이션
-const content = "Hello, I'm Sungbae!";
 const text = document.querySelector(".title h1");
-let textidx = 0;
+const content = "안녕하세요 :)\n24학번 전성배입니다.";
+let contentIndex = 0;
 
-function typing() {
-    let txt = content[textidx++];
-    text.innerHTML += txt;
-
-    if (textidx > content.length) {
-        text.textContent = "";
-        textidx = 0;
+let typing = function () {
+    text.innerHTML += content[contentIndex];
+    contentIndex++;
+    if (content[contentIndex] === "\n") {
+        text.innerHTML += "<br />";
+        contentIndex++;
     }
-}
+    if (contentIndex > content.length) {
+        text.textContent = "";
+        contentIndex = 0;
+    }
+};
 setInterval(typing, 200);
 
 //스크롤 애니메이션
@@ -31,8 +34,7 @@ let currentIdx = 0;
 let slideWidth = 300;
 let slideMargin = 30;
 
-slides.style.width =
-    (slideWidth + slideMargin) * slideCount - slideMargin + "px";
+slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + "px";
 
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");

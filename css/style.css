@@ -4,6 +4,21 @@
     font-weight: bold;
 }
 
+.intersecrtion {
+    background-color: black;
+    height: 6000px;
+    padding: 1px;
+}
+
+.animation {
+    padding: 1px;
+    margin-top: 1000px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 2.5s;
+}
+
 .category {
     display: flex;
     flex-direction: column;
@@ -28,10 +43,6 @@ ul {
 }
 li {
     list-style: none;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -169,6 +180,8 @@ header a:hover .tooltip-text {
     background-attachment: fixed;
     background-position: 0 -120px;
     height: 100vh;
+    position: relative;
+    padding: 1px;
 }
 
 #home .title {
