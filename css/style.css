@@ -4,6 +4,10 @@
     font-weight: bold;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .intersecrtion {
     background-color: black;
     height: 6000px;
